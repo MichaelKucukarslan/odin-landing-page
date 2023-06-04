@@ -1,10 +1,25 @@
 :root{
     --header-height: 5%;
+    --min-margin-left-right: 10%;
+}
+
+html {
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: black;
+    width: 100;
 }
 
 html,
 body{
+    width: 80%;
     height: 100%;
+    padding-left: var(--min-margin-left-right);
+    padding-right: var(--min-margin-left-right);
+    max-width: 1000px;
+    min-width: 650px;
+    justify-content: center;
+    align-items: center;
     background-color: blue;
     margin: 0;
     display: flex;
@@ -15,14 +30,34 @@ header{
     min-height: var(--header-height);
     background-color: aqua;
     flex: 0 1 auto;
+    width: 100%;
+    display: inline;
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
 }
 
+header h1, ul{
+    display: inline;
+}
+header ul li{
+    float: right;
+    display: inline;
+    list-style-type: none;
+}
+
+header ul a{
+    text-decoration: none;
+    background-color: red;
+}
 content{
     background-color: aquamarine;
     flex: 1 1 auto;
+    width: 100%;
 }
 
 footer{
     flex: 0 1 var(--header-height);
     background-color: blueviolet;
+    width: 100%;
 }
