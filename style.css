@@ -1,67 +1,99 @@
-:root{
+:root {
     --header-height: 5%;
     --min-margin-left-right: 10%;
 }
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+ }
 
 html {
     padding-left: 50px;
     padding-right: 50px;
     background-color: black;
-    width: 100;
-}
-
-html,
-body{
-    width: 80%;
-    height: 100%;
-    padding-left: var(--min-margin-left-right);
-    padding-right: var(--min-margin-left-right);
-    max-width: 1000px;
-    min-width: 650px;
-    justify-content: center;
-    align-items: center;
-    background-color: blue;
-    margin: 0;
+    border: 1px solid white;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
-header{
-    min-height: var(--header-height);
-    background-color: aqua;
-    flex: 0 1 auto;
+body
+{
     width: 100%;
+    max-width: 800px;
+}
+
+header {
+    min-height: var(--header-height);
+    position: fixed;
+    width: 100%;
+    padding: 0% 70px 0%;
+    top: 0%;
+    background-color: #53599A;
     display: flex;
     align-content: center;
     justify-content: space-between;
 }
 
-header h1, ul{
+body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: var(--header-height);
+    /* padding-left: var(--min-margin-left-right);
+    padding-right: var(--min-margin-left-right);
+    max-width: 1000px;
+    min-width: 650px;
+    background-color: blue;
+    */
+}
+
+header h1,
+ul {
     display: flex;
     padding: 10px;
     justify-content: center;
     align-items: center;
 }
 
-header ul li{
+
+header ul li {
     float: right;
     display: inline;
     list-style-type: none;
     padding: 5px;
 }
 
-header ul a{
+header ul a {
     text-decoration: none;
     background-color: red;
 }
-content{
+
+content {
+    padding: 15px;
     background-color: aquamarine;
     flex: 1 1 auto;
     width: 100%;
 }
 
-footer{
-    flex: 0 1 var(--header-height);
-    background-color: blueviolet;
+/*
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+} */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    min-height: var(--header-height);
+    background-color: #5AA9E6;
     width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 var(--header-height);
 }
