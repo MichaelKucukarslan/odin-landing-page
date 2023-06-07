@@ -54,6 +54,10 @@ header {
     justify-content: space-between;
 }
 
+header>h1{
+    color: var(--accent-color-1)
+}
+
 .top{
     flex-grow: 1;
     text-align: center;
@@ -108,6 +112,7 @@ img {
     object-position: 100% 0;
     width: 100%;
     border-radius: 20px;
+    border: 5px solid var(--accent-color-1);
 }
 
 .left {
@@ -141,6 +146,7 @@ img {
     height: 150px;
     object-fit: cover;
 }
+
 .information>.fun_fact>p{
     text-align: center;
 }
