@@ -4,7 +4,7 @@
     --header-color: #004E98;
     --footer-color: #3A6EA5;
     --accent-color-1: #FF6700;
-    --accent-color-2: #C0C0C0;
+    --accent-color-2: #aeaeae;
     --accent-color-3: #EBEBEB;
 
 }
@@ -28,6 +28,18 @@ body
     width: 100%;
     max-width: 800px;
     background-color: var(--accent-color-3);
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: var(--header-height);
+    /* padding-left: var(--min-margin-left-right);
+    padding-right: var(--min-margin-left-right);
+    max-width: 1000px;
+    min-width: 650px;
+    background-color: blue;
+    */
 }
 
 header {
@@ -42,19 +54,9 @@ header {
     justify-content: space-between;
 }
 
-body {
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: var(--header-height);
-    /* padding-left: var(--min-margin-left-right);
-    padding-right: var(--min-margin-left-right);
-    max-width: 1000px;
-    min-width: 650px;
-    background-color: blue;
-    */
+.top{
+    flex-grow: 1;
+    text-align: center;
 }
 
 header h1,
@@ -78,7 +80,6 @@ header ul a {
     background-color: var(--footer-color);
     text-decoration: none;
     color: var(--accent-color-3);
-    /* TODO: Get background color */
 }
 
 a{
@@ -95,21 +96,63 @@ content {
     width: 100%;
 }
 
-/*
 .question {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-} */
+    background-color: var(--accent-color-2);
+}
 
+img {
+    object-fit: cover; 
+    object-position: 100% 0;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.left {
+    float: left;
+    width: 50%;
+}
+
+.right {
+    float: right;
+    width: 50%;
+}
+
+.information{
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.information>.fun_fact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+    width: 20%;
+    height: 100%;
+}
+
+.information>.fun_fact>img{
+    border: 5px solid var(--accent-color-1);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.information>.fun_fact>p{
+    text-align: center;
+}
 footer {
     position: fixed;
     bottom: 0;
+    padding: 0% 70px 0%;
     min-height: var(--header-height);
     background-color: var(--header-color);
     width: 100%;
     display: inline-flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     flex: 0 1 var(--header-height);
     color: var(--accent-color-3);
