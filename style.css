@@ -3,7 +3,7 @@
     --min-margin-left-right: 10%;
     --header-color: #004E98;
     --footer-color: #3A6EA5;
-    --accent-color-1: #FF6700;
+    --accent-color-1: #003c7c;
     --accent-color-2: #aeaeae;
     --accent-color-3: #EBEBEB;
 
@@ -150,6 +150,33 @@ img {
 .information>.fun_fact>p{
     text-align: center;
 }
+
+.quote {
+    padding: 10px 20%;
+    background-color: var(--accent-color-2);
+}
+
+.action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 15% calc(3 * var(--header-height));
+}
+
+.email{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--accent-color-1);
+    padding: 20px 30px;
+    color: white;
+}
+button {
+    height: 40px;
+    width: 100px;
+}
+
 footer {
     position: fixed;
     bottom: 0;
